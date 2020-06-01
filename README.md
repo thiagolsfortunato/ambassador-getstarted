@@ -1,2 +1,4 @@
 # ambassador-getstarted
-Setup Ambassador (prod) on GKE cluster
+
+[Install with Google Kubernetes Engine (GKE) Ingress](https://www.getambassador.io/docs/latest/topics/running/ambassador-with-gke/)
+
