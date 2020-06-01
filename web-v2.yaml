@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web2
+spec:
+  selector:
+    matchLabels:
+      run: web2
+  template:
+    metadata:
+      labels:
+        run: web2
+    spec:
+      containers:
+      - image: gcr.io/google-samples/hello-app:2.0
+        imagePullPolicy: IfNotPresent
+        name: web2
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+          name: http
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: web2
+spec:
+  type: NodePort
+  selector:
+    run: web2
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: http
+  
+--- 
+
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: web2
+  namespace: default
+spec:
+  prefix: /v2
+  service: web2:8080
