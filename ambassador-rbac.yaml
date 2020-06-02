@@ -28,6 +28,20 @@ spec:
   selector:
     service: ambassador
 ---
+
+apiVersion: getambassador.io/v2
+kind: Host
+metadata:
+  name: ambassador-petlove
+spec:
+  hostname: '*'
+  acmeProvider:
+    authority: none
+  requestPolicy:
+    insecure:
+      action: Route
+
+---
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRole
 metadata:
