@@ -39,7 +39,7 @@ spec:
     authority: none
   requestPolicy:
     insecure:
-      action: Route
+      action: Route # route traffica HTTP 
 
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
