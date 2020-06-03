@@ -19,6 +19,22 @@ spec:
         - containerPort: 8080
           protocol: TCP
           name: http
+        readinessProbe:
+          httpGet:
+            port: 8080
+            path: /
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          timeoutSeconds: 2
+          successThreshold: 5
+          failureThreshold: 20
+        livenessProbe:
+          httpGet:
+            port: 8080
+            path: /
+          initialDelaySeconds: 60
+          periodSeconds: 60
+          timeoutSeconds: 4
 
 ---
 
@@ -43,5 +59,6 @@ metadata:
   name: web
   namespace: default
 spec:
+  host: web.exemple.com # change this to your domain
   prefix: /
   service: web:8080
