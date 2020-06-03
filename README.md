@@ -8,7 +8,7 @@
 
 ## How to run?
 
-This steps assumption that you already have an Kubernetes Engine (GKE) running :)
+This steps assumption that you already have a Google Kubernetes Engine (GKE) running :)
 
 Replace all references `example.com` to `your.domain.com`
 
