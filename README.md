@@ -49,7 +49,7 @@ PS: After that you can acess web service in: `http://web.example.com`
 kubectl apply -f yamls/5_web2.yaml
 ```
 
-Now you have 2 applications running and ambassador controlling trafic based Host Header :tada: 
+Now you have 2 applications running and ambassador controlling trafic based Host Header configured by [Mappings](https://www.getambassador.io/docs/latest/topics/using/mappings/) :tada: 
 
 #### 99 - HTTP -> HTTPS
 
