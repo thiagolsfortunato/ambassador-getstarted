@@ -32,9 +32,9 @@ spec:
 apiVersion: getambassador.io/v2
 kind: Host
 metadata:
-  name: ambassador-petlove
+  name: ambassador
 spec:
-  hostname: '*'
+  hostname: '*.example.com' # only accept domain exaple.com
   acmeProvider:
     authority: none
   requestPolicy:
