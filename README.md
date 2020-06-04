@@ -49,9 +49,9 @@ PS: After that you can acess web service in: `http://web.example.com`
 kubectl apply -f yamls/5_web2.yaml
 ```
 
-Now you have 2 applications running and ambassador controlling trafic based Host Header configured by [Mappings](https://www.getambassador.io/docs/latest/topics/using/mappings/) :tada: 
+-> Now you have 2 applications running and ambassador controlling trafic based Host Header configured by [Mappings](https://www.getambassador.io/docs/latest/topics/using/mappings/) :tada: 
 
-#### 99 - HTTP -> HTTPS
+#### 99 - HTTP -> HTTPS [WIP]
 
 Install Cert Manager following [this](https://www.getambassador.io/docs/latest/howtos/cert-manager/) or [this](https://cert-manager.io/docs/installation/kubernetes/) tutorial, to create and manage your certificates in Kubernetes.
 
